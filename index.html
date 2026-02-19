@@ -1,49 +1,219 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Jalm Studio Inc</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jalm Studio Inc — designing and developing iOS applications and digital products." />
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; max-width: 800px; }
-    h1 { color: #111; }
-    h2 { margin-top: 40px; }
-    .section { margin-bottom: 30px; }
+    :root{
+      --bg:#0b0c10;
+      --card:#11131a;
+      --text:#e9ecf1;
+      --muted:#b6bcc8;
+      --line:rgba(255,255,255,.10);
+      --accent:#7aa2ff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 800px at 20% 0%, rgba(122,162,255,.18), transparent 55%),
+                  radial-gradient(900px 700px at 90% 20%, rgba(255,122,178,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px; margin:0 auto; padding:28px 18px 56px}
+    header{
+      padding:48px 0 24px;
+      border-bottom:1px solid var(--line);
+    }
+    .brand{
+      display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    }
+    .logo{
+      display:flex; align-items:center; gap:12px;
+    }
+    .mark{
+      width:42px; height:42px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(122,162,255,.95), rgba(122,255,205,.65));
+      box-shadow: 0 10px 30px rgba(122,162,255,.18);
+    }
+    h1{margin:0; font-size:30px; letter-spacing:.2px}
+    .tagline{margin:8px 0 0; color:var(--muted); max-width:72ch}
+    nav{
+      display:flex; gap:14px; flex-wrap:wrap;
+      font-size:14px;
+    }
+    nav a{
+      padding:8px 10px; border:1px solid var(--line); border-radius:999px;
+      color:var(--text); opacity:.9;
+      background: rgba(255,255,255,.03);
+    }
+    nav a:hover{opacity:1; text-decoration:none; border-color:rgba(122,162,255,.45)}
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      padding:22px 0;
+    }
+    @media (max-width:860px){ .grid{grid-template-columns:1fr} }
+    .card{
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+    }
+    .card h2{margin:0 0 10px; font-size:18px}
+    .card p{margin:0 0 10px; color:var(--muted)}
+    .list{margin:10px 0 0; padding:0; list-style:none}
+    .list li{
+      padding:10px 0;
+      border-top:1px solid var(--line);
+      color:var(--text);
+    }
+    .list li:first-child{border-top:0}
+    .pill{
+      display:inline-block;
+      margin:8px 8px 0 0;
+      padding:7px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:13px;
+    }
+    section{padding:14px 0}
+    section h2{font-size:20px; margin:0 0 10px}
+    .muted{color:var(--muted)}
+    footer{
+      margin-top:28px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .small{font-size:13px}
+    .kvs{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top:10px;
+    }
+    @media (max-width:640px){ .kvs{grid-template-columns:1fr} }
+    .kv{
+      padding:12px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background: rgba(255,255,255,.02);
+    }
+    .kv b{display:block; font-size:12px; color:var(--muted); font-weight:600; margin-bottom:4px}
   </style>
 </head>
+
 <body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <div class="mark" aria-hidden="true"></div>
+          <div>
+            <h1>Jalm Studio Inc</h1>
+            <p class="tagline">We design and develop mobile applications and digital products, with a focus on the Apple ecosystem.</p>
+          </div>
+        </div>
 
-<h1>Jalm Studio Inc</h1>
-<p><strong>Designing and Developing Mobile Applications</strong></p>
+        <nav aria-label="Site">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+          <a href="#privacy">Privacy</a>
+        </nav>
+      </div>
+    </header>
 
-<div class="section">
-<h2>About Us</h2>
-<p>Jalm Studio Inc is a United States–based software development company located in Sheridan, Wyoming. We focus on designing and building high-quality iOS applications and digital products.</p>
-</div>
+    <div class="grid">
+      <div class="card">
+        <h2 id="about">About</h2>
+        <p>
+          Jalm Studio Inc is a U.S.-based software development company focused on creating high-quality iOS applications and user-centered digital experiences.
+          Our work emphasizes clean design, performance, and long-term maintainability.
+        </p>
 
-<div class="section">
-<h2>Services</h2>
-<ul>
-<li>iOS Application Development</li>
-<li>Mobile App Design</li>
-<li>Product Strategy & Prototyping</li>
-<li>Software Consulting</li>
-</ul>
-</div>
+        <div class="kvs">
+          <div class="kv">
+            <b>Legal entity</b>
+            Jalm Studio Inc
+          </div>
+          <div class="kv">
+            <b>Location</b>
+            Sheridan, Wyoming, United States
+          </div>
+          <div class="kv">
+            <b>Business email</b>
+            <a href="mailto:hi@jalmstudio.com">hi@jalmstudio.com</a>
+          </div>
+          <div class="kv">
+            <b>Focus</b>
+            iOS apps & product development
+          </div>
+        </div>
 
-<div class="section">
-<h2>Contact</h2>
-<p>Email: hi@jalmstudio.com</p>
-<p>Jalm Studio Inc<br>
-30 N Gould St Ste R<br>
-Sheridan, WY 82801<br>
-United States</p>
-</div>
+        <span class="pill">iOS Development</span>
+        <span class="pill">Product Design</span>
+        <span class="pill">Prototyping</span>
+        <span class="pill">Consulting</span>
+      </div>
 
-<div class="section">
-<h2>Privacy Policy</h2>
-<p>This website does not collect personal information unless you voluntarily contact us via email. We do not sell or share personal data with third parties.</p>
-</div>
+      <div class="card">
+        <h2 id="services">Services</h2>
+        <ul class="list">
+          <li><b>iOS Application Development</b><div class="muted small">End-to-end development for iPhone and iPad applications.</div></li>
+          <li><b>Mobile App Design</b><div class="muted small">UI/UX design focused on clarity, accessibility, and usability.</div></li>
+          <li><b>Product Strategy & Prototyping</b><div class="muted small">Requirements, wireframes, prototypes, and validation.</div></li>
+          <li><b>Software Consulting</b><div class="muted small">Architecture guidance, code reviews, and technical planning.</div></li>
+        </ul>
+      </div>
+    </div>
 
+    <section class="card" id="contact">
+      <h2>Contact</h2>
+      <p class="muted">For business inquiries, partnerships, or support, contact us:</p>
+      <p>
+        Email: <a href="mailto:hi@jalmstudio.com">hi@jalmstudio.com</a><br/>
+        Jalm Studio Inc<br/>
+        30 N Gould St Ste R<br/>
+        Sheridan, WY 82801<br/>
+        United States
+      </p>
+    </section>
+
+    <section class="card" id="privacy">
+      <h2>Privacy Policy</h2>
+      <p class="muted small"><b>Effective date:</b> <span id="date"></span></p>
+      <p class="muted">
+        This website does not collect personal information unless you voluntarily contact us via email.
+        If you contact us, we may retain your email address and message solely to respond to your inquiry.
+        We do not sell, rent, or share personal information with third parties.
+      </p>
+      <p class="muted">
+        If you have questions about this Privacy Policy, contact us at
+        <a href="mailto:hi@jalmstudio.com">hi@jalmstudio.com</a>.
+      </p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Jalm Studio Inc. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    const now = new Date();
+    document.getElementById('year').textContent = now.getFullYear();
+    document.getElementById('date').textContent = now.toISOString().slice(0,10);
+  </script>
 </body>
 </html>
